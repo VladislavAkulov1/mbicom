@@ -4,50 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MBI Inc. - Twoje IT Rozwiązania</title>
-  <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; color: #111; }
-    header, nav, section, footer { padding: 20px; text-align: center; }
-    nav a { margin: 0 10px; text-decoration: none; color: #333; }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      color: white; padding: 120px 20px;
-    }
-    .section { max-width: 1000px; margin: auto; padding: 40px 20px; }
-    .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .card {
-      background: #f0f0f0; padding: 20px; border-radius: 10px; width: 280px;
-    }
-    input, textarea, button {
-      display: block; width: 100%; margin: 10px 0; padding: 10px;
-      font-size: 1em; border-radius: 5px; border: 1px solid #ccc;
-    }
-    footer { background: #f4f4f4; font-size: 0.9em; }
-    .lang { display: none; }
-    .lang.active { display: block; }
-    .lang-toggle {
-      position: fixed;
-      top: 50px;
-      right: 10px;
-      z-index: 999;
-    }
-    .lang-toggle button {
-      margin-left: 5px;
-      padding: 5px 10px;
-    }
-    #toTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: none;
-      background: #000;
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      z-index: 999;
-      text-decoration: none;
-    }
-  </style>
   <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
 
 </head>
 <body>
@@ -56,24 +14,21 @@
     <button onclick="switchLang('ru')">🇷🇺 RU</button>
   </div>
 
-  <header>
-    <h1>MBI Inc.</h1>
-    <nav>
+  <header class="header sticky-header">
+    <div class="logo">
+      <img src="logo.png" alt="MBI Logo" style="height:40px; vertical-align:middle; margin-right:10px;">
+      <strong>MBI inc. - Twoje IT Rozwiązania</strong>
+    </div>
+    <nav class="nav">
       <a href="#about">O nas</a>
       <a href="#services">Oferta</a>
       <a href="#reviews">Opinie</a>
-      <a href="#contact">Kontakt</a>
+      <a href="#contact" class="cta">Kontakt</a>
     </nav>
   </header>
+  
 
-  <section class="hero">
-    <h2 class="lang pl active">🚀 Innowacyjne Rozwiązania IT</h2>
-    <h2 class="lang ru">🚀 Инновационные IT-решения</h2>
-    <p class="lang pl active">Strony, aplikacje, systemy – od pomysłu do wdrożenia</p>
-    <p class="lang ru">Сайты, приложения, системы – от идеи до реализации</p>
-  </section>
-
-  <section id="about" class="section">
+  <section id="about" class="hero fancy-bg">
     <h2 class="lang pl active">📈 Kim jesteśmy?</h2>
     <h2 class="lang ru">📈 Кто мы?</h2>
     <p class="lang pl active"> MBI Inc. to polska firma IT specjalizująca się w kompleksowej realizacji projektów cyfrowych.
@@ -155,7 +110,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section" style="background:#f9f9f9;">
     <h2 class="lang pl active">📞 Skontaktuj się z nami</h2>
     <h2 class="lang ru">📞 Свяжитесь с нами</h2>
     <p class="lang pl active">
