@@ -295,3 +295,50 @@ footer:hover {
     font-size: 1em;
   }
 }
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex: 2 1 auto;
+    flex-shrink: 1;
+    overflow-x: auto;
+  }
+
+  .nav a {
+    white-space: nowrap;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #f7f7f7;
+  }
+
+  .nav .cta {
+    white-space: nowrap;
+    background: black;
+    color: white;
+  }
+
+  .lang-floating {
+    top: auto;
+    bottom: 70px;
+    right: 10px;
+    transform: none;
+  }
+}
