@@ -196,13 +196,12 @@ footer:hover {
 /* Фиксированные флаги */
 .lang-floating {
   position: fixed;
-  top: 50%;
+  bottom: 70px;
   right: 10px;
-  transform: translateY(-50%);
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 10px;
-  z-index: 1000;
+  z-index: 900;
 }
 .lang-floating button {
   font-size: 1.4em;
@@ -261,8 +260,7 @@ footer:hover {
     padding: 10px 0;
   }
   .lang-floating {
-    top: auto;
-    bottom: 70px;
+    bottom: 90px;
     right: 10px;
     transform: none;
   }
