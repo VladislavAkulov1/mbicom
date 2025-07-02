@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBI Inc. - Twoje IT Rozwiązania</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; color: #111; }
+    header, nav, section, footer { padding: 20px; text-align: center; }
+    nav a { margin: 0 10px; text-decoration: none; color: #333; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white; padding: 120px 20px;
+    }
+    .section { max-width: 1000px; margin: auto; padding: 40px 20px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .card {
+      background: #f0f0f0; padding: 20px; border-radius: 10px; width: 280px;
+    }
+    input, textarea, button {
+      display: block; width: 100%; margin: 10px 0; padding: 10px;
+      font-size: 1em; border-radius: 5px; border: 1px solid #ccc;
+    }
+    footer { background: #f4f4f4; font-size: 0.9em; }
+    .lang { display: none; }
+    .lang.active { display: block; }
+    .lang-toggle {
+      position: fixed;
+      top: 50px;
+      right: 10px;
+      z-index: 999;
+    }
+    .lang-toggle button {
+      margin-left: 5px;
+      padding: 5px 10px;
+    }
+    #toTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 999;
+      text-decoration: none;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <div class="lang-toggle">
+    <button onclick="switchLang('pl')">🇵🇱 PL</button>
+    <button onclick="switchLang('ru')">🇷🇺 RU</button>
+  </div>
+
+  <header>
+    <h1>MBI Inc.</h1>
+    <nav>
+      <a href="#about">O nas</a>
+      <a href="#services">Oferta</a>
+      <a href="#reviews">Opinie</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2 class="lang pl active">🚀 Innowacyjne Rozwiązania IT</h2>
+    <h2 class="lang ru">🚀 Инновационные IT-решения</h2>
+    <p class="lang pl active">Strony, aplikacje, systemy – od pomysłu do wdrożenia</p>
+    <p class="lang ru">Сайты, приложения, системы – от идеи до реализации</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2 class="lang pl active">📈 Kim jesteśmy?</h2>
+    <h2 class="lang ru">📈 Кто мы?</h2>
+    <p class="lang pl active"> MBI Inc. to polska firma IT specjalizująca się w kompleksowej realizacji projektów cyfrowych.
+      Projektujemy i wdrażamy nowoczesne strony internetowe, sklepy online, systemy CRM, a także aplikacje webowe i mobilne.
+      Naszym celem jest dostarczanie wartościowych i dopasowanych rozwiązań, które realnie wspierają rozwój biznesu naszych klientów.
+      Oferujemy również doradztwo technologiczne, stałą opiekę techniczną i rozwój produktów.</p>
+    <p class="lang ru">  MBI Inc. — IT-компания из Польши, предоставляющая полный цикл цифровых услуг: от создания сайтов и интернет-магазинов до CRM-систем и мобильных приложений. Мы разрабатываем решения, которые помогают бизнесу расти, автоматизировать процессы и эффективно работать онлайн. Предоставляем поддержку, консультации и развитие проектов на всех этапах.</p>
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" style="width:100%; max-width:600px; margin-top:20px;" />
+  </section>
+
+
+  <section id="services" class="section">
+    <h2 class="lang pl active">🧩 Nasze usługi IT</h2>
+    <h2 class="lang ru">🧩 Наши IT-услуги</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>💻 Strony internetowe</h3>
+        <p class="lang pl active">Wizytówki, landing page, serwisy korporacyjne i blogi.</p>
+        <p class="lang ru">Визитки, лендинги, корпоративные сайты и блоги.</p>
+      </div>
+      <div class="card">
+        <h3>🛒 Sklepy internetowe</h3>
+        <p class="lang pl active">Nowoczesne e-commerce z płatnościami online i zarządzaniem produktami.</p>
+        <p class="lang ru">Интернет-магазины с оплатой, корзиной и панелью управления.</p>
+      </div>
+      <div class="card">
+        <h3>🔍 SEO & marketing</h3>
+        <p class="lang pl active">Optymalizacja, kampanie Google Ads, treści i pozycjonowanie.</p>
+        <p class="lang ru">SEO-оптимизация, контент, продвижение и реклама.</p>
+      </div>
+      <div class="card">
+        <h3>🔧 Wsparcie i rozwój</h3>
+        <p class="lang pl active">Administracja, aktualizacje, kopie zapasowe, audyty techniczne.</p>
+        <p class="lang ru">Поддержка, обновления, резервные копии и аудит сайтов.</p>
+      </div>
+       <div class="card">
+      <h3>🌐 Web</h3>
+      <p class="lang pl active">Projektowanie nowoczesnych stron</p>
+      <p class="lang ru">Разработка современных сайтов</p>
+    </div>
+    <div class="card">
+      <h3>📱 Mobile</h3>
+      <p class="lang pl active">Aplikacje Android i iOS</p>
+      <p class="lang ru">Приложения для Android и iOS</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ CRM</h3>
+      <p class="lang pl active">Systemy do zarządzania firmą</p>
+      <p class="lang ru">Системы управления бизнесом</p>
+    </div>
+  </section>
+  <section class="section" style="background:#003366; color:white; text-align:center;">
+    <h2 class="lang pl active">🚀 Gotowy na współpracę?</h2>
+    <h2 class="lang ru">🚀 Готовы начать?</h2>
+    <p class="lang pl active">Skontaktuj się z nami i otrzymaj bezpłatną wycenę w 24h!</p>
+    <p class="lang ru">Свяжитесь с нами — и получите бесплатную оценку проекта за 24 часа!</p>
+    <a href="#contact" style="display:inline-block; margin-top:20px; background:white; color:#003366; padding:12px 24px; border-radius:8px; font-weight:bold; text-decoration:none;">📩 Kontakt</a>
+  </section>
+  
+  <section id="reviews" class="section" style="background:#f9f9f9;">
+    <h2 class="lang pl active">💬 Opinie klientów</h2>
+    <h2 class="lang ru">💬 Отзывы клиентов</h2>
+    <div class="cards">
+      <div class="card">
+        <p class="lang pl active">„MBI stworzyło naszą stronę firmową w rekordowym czasie. Wszystko działa perfekcyjnie, a zespół był bardzo komunikatywny.”</p>
+        <p class="lang ru">«MBI сделала наш корпоративный сайт очень быстро. Всё работает отлично, команда всегда на связи!»</p>
+        <p><strong>— Anna Kowalska, Kraków</strong></p>
+      </div>
+      <div class="card">
+        <p class="lang pl active">„Dzięki MBI nasz sklep internetowy nie tylko wygląda świetnie, ale też sprzedaje. Polecamy każdemu!”</p>
+        <p class="lang ru">«Сайт магазина получился стильным и приносит продажи. Очень довольны работой MBI!»</p>
+        <p><strong>— Piotr Nowak, Warszawa</strong></p>
+      </div>
+      <div class="card">
+        <p class="lang pl active">„Współpracujemy z MBI od kilku miesięcy w zakresie SEO. Ruch na stronie wzrósł ponad dwukrotnie.”</p>
+        <p class="lang ru">«Работаем с MBI по SEO — трафик на сайте вырос более чем в 2 раза за несколько месяцев.»</p>
+        <p><strong>— Olga Dąbrowska, Poznań</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="lang pl active">📞 Skontaktuj się z nami</h2>
+    <h2 class="lang ru">📞 Свяжитесь с нами</h2>
+    <p class="lang pl active">
+      Napisz do nas na <a href="mailto:kontakt@mbi.com">kontakt@mbi.com</a><br>
+      lub zadzwoń pod numer <a href="tel:+48123456789">+48 123 456 789</a>
+    </p>
+    <p class="lang ru">
+      Напишите нам на <a href="mailto:kontakt@mbi.com">kontakt@mbi.com</a><br>
+      или позвоните по номеру <a href="tel:+48123456789">+48 123 456 789</a>
+    </p>
+    <p style="margin-top: 20px;">
+      <a href="https://facebook.com" target="_blank">Facebook</a> •
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a> •
+      <a href="https://maps.google.com" target="_blank">Google Maps</a>
+    </p>
+  </section>
+  
+
+  <footer>
+    <p>© 2025 MBI Inc. | kontakt@mbi.com | +48 123 456 789</p>
+  </footer>
+
+  <a href="#" id="toTop">↑</a>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll(`.lang.${lang}`).forEach(el => el.classList.add('active'));
+    }
+    window.addEventListener("scroll", function () {
+      document.getElementById("toTop").style.display = window.scrollY > 300 ? "block" : "none";
+    });
+  </script>
+</body>
+</html>
