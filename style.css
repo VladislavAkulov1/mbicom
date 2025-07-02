@@ -227,3 +227,41 @@ footer:hover {
   right: 10px;
   z-index: 999;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav .cta {
+  padding: 10px 18px;
+  background: #111;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.lang-toggle {
+  display: flex;
+  gap: 6px;
+}
+.lang-toggle button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.lang-toggle button:hover {
+  transform: scale(1.1);
+}
