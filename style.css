@@ -34,6 +34,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 20px 40px;
   background: white;
   position: sticky;
@@ -51,6 +52,7 @@ body::before {
 }
 .nav {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .nav a {
@@ -64,9 +66,10 @@ body::before {
 }
 .nav .cta {
   padding: 10px 18px;
-  background: black;
+  background: #111;
   color: white;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
 /* HERO */
@@ -189,22 +192,40 @@ footer {
 footer:hover {
   background: #000;
 }
-.lang-toggle {
+
+/* Фиксированные флаги */
+.lang-floating {
   position: fixed;
-  top: 60px;
+  top: 50%;
   right: 10px;
-  z-index: 999;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
 }
-.lang-toggle button {
-  margin-left: 5px;
-  padding: 5px 10px;
+.lang-floating button {
+  font-size: 1.4em;
+  background: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
+.lang-floating button:hover {
+  transform: scale(1.1);
+  background: #f0f0f0;
+}
+
 .lang {
   display: none;
 }
 .lang.active {
   display: block;
 }
+
 #toTop {
   position: fixed;
   bottom: 20px;
@@ -221,47 +242,44 @@ footer:hover {
 #toTop:hover {
   background: #007BFF;
 }
-.lang-toggle {
-  position: fixed;
-  top: 60px;
-  right: 10px;
-  z-index: 999;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px 40px;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.nav .cta {
-  padding: 10px 18px;
-  background: #111;
-  color: white;
-  border-radius: 6px;
-  font-weight: 500;
-}
-.lang-toggle {
-  display: flex;
-  gap: 6px;
-}
-.lang-toggle button {
-  background: none;
-  border: none;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.lang-toggle button:hover {
-  transform: scale(1.1);
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .nav a {
+    padding: 10px 0;
+  }
+  .lang-floating {
+    top: auto;
+    bottom: 70px;
+    right: 10px;
+    transform: none;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+  .section {
+    padding: 40px 16px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
 }
