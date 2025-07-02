@@ -14,9 +14,9 @@
     <button onclick="switchLang('ru')">🇷🇺 RU</button>
   </div>
 
-  <header class="header sticky-header">
+  <header class="header">
     <div class="logo">
-      <img src="logo.png" alt="MBI Logo" style="height:40px; vertical-align:middle; margin-right:10px;">
+      <img src="logo.png" alt="MBI Logo" />
       <strong>MBI inc. - Twoje IT Rozwiązania</strong>
     </div>
     <nav class="nav">
@@ -24,8 +24,13 @@
       <a href="#services">Oferta</a>
       <a href="#reviews">Opinie</a>
       <a href="#contact" class="cta">Kontakt</a>
+      <div class="lang-toggle">
+        <button onclick="switchLang('pl')">🇵🇱</button>
+        <button onclick="switchLang('ru')">🇷🇺</button>
+      </div>
     </nav>
   </header>
+  
   
 
   <section id="about" class="hero fancy-bg">
